@@ -5,7 +5,7 @@ export const transcribeVideo = async (file) => {
     const formData = new FormData();
     formData.append("video", file);
 
-    const response = await axios.post("http://localhost:5000/api/transcribe-video", formData, {
+    const response = await axios.post("https://persist-assignment-backend.onrender.com/api/transcribe-video", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
@@ -23,7 +23,7 @@ let data = {prompt}
     try {
         const response = await axios({
             method: 'post',
-            url: "http://localhost:5000/api/generate-story",
+            url: "https://persist-assignment-backend.onrender.com/api/generate-story",
             headers: {
               'Content-Type': 'application/json',
             },
